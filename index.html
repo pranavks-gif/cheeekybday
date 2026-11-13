@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Cutu Chic ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   VINTAGE COMPUTER THEME
+========================= */
+
+:root {
+    --cream: #eee2ce;
+    --beige: #d6bea2;
+    --monitor: #b99e84;
+    --pink: #e8bdc7;
+    --pink-dark: #ca929f;
+    --brown: #654b42;
+    --screen: #dce3c7;
+    --screen-dark: #455b43;
+    --white: #fff9ed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle, #e9d9c4 1px, transparent 1px);
+    background-size: 18px 18px;
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: 'Courier Prime', monospace;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: 'Courier Prime', monospace;
+    cursor: pointer;
+}
+
+/* BIRTHDAY LOCK */
+button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page.active {
+    display: flex;
+    animation: fadeIn .6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CRT MONITOR
+========================= */
+
+.computer {
+    width: min(720px, 96%);
+    background: linear-gradient(145deg, #ddc6ac, #b89c83);
+    padding: 22px;
+    border: 5px solid #a98d75;
+    border-radius: 35px 35px 45px 45px;
+    box-shadow:
+        10px 12px 0 #9e806c,
+        15px 18px 25px #60483b40;
+    position: relative;
+}
+
+.monitor-top {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #75594c;
+    padding: 3px 0 17px;
+}
+
+.screen {
+    position: relative;
+    background: var(--screen);
+    border: 12px solid #806b5d;
+    border-radius: 40px;
+    padding: 30px 22px;
+    min-height: 390px;
+    overflow: hidden;
+    box-shadow:
+        inset 0 0 30px #40583b55,
+        0 0 0 4px #a88d78;
+}
+
+/* CRT scanlines */
+
+.screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 3px,
+        #394d3210 4px,
+        #394d3210 5px
+    );
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Screen glow */
+
+.screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse,
+        transparent 45%,
+        #40583b20 100%
+    );
+    pointer-events: none;
+    z-index: 4;
+}
+
+.screen-content {
+    position: relative;
+    z-index: 6;
+}
+
+.screen-text {
+    color: var(--screen-dark);
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.monitor-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 15px 3px;
+}
+
+.brand {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.monitor-light {
+    width: 11px;
+    height: 11px;
+    background: #7b9c69;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #7b9c69;
+}
+
+.monitor-button {
+    width: 25px;
+    height: 25px;
+    background: #927b68;
+    border: 3px solid #806b5d;
+    border-radius: 50%;
+}
+
+/* =========================
+   GENERAL CARDS
+========================= */
+
+.card {
+    width: min(680px, 96%);
+    background: var(--white);
+    border: 4px solid var(--beige);
+    border-radius: 18px;
+    padding: 27px 22px;
+    box-shadow:
+        8px 8px 0 var(--pink),
+        12px 14px 20px #6c4c4020;
+    text-align: center;
+    position: relative;
+}
+
+.card-header {
+    font-family: 'VT323', monospace;
+    font-size: 23px;
+    letter-spacing: 2px;
+    border-bottom: 2px dashed var(--pink-dark);
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+    font-size: clamp(2rem, 7vw, 3.4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+}
+
+p {
+    line-height: 1.8;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 7px;
+    border: 2px solid var(--brown);
+    border-radius: 5px;
+    background: var(--pink);
+    color: var(--brown);
+    font-size: 15px;
+    font-weight: bold;
+    transition: .2s;
+    box-shadow: 3px 3px 0 var(--pink-dark);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #e4aebc;
+}
+
+.primary {
+    background: var(--brown);
+    color: white;
+    box-shadow: 3px 3px 0 #9b7c6d;
+}
+
+.primary:hover {
+    background: #846357;
+}
+
+.photo {
+    width: min(360px, 90%);
+    max-height: 440px;
+    object-fit: cover;
+    border: 7px solid white;
+    outline: 2px solid var(--pink-dark);
+    border-radius: 5px;
+    margin: 18px auto;
+    box-shadow: 5px 6px 0 #d4b1a7;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.time-box {
+    background: #cbd5b6;
+    color: var(--screen-dark);
+    padding: 12px;
+    min-width: 75px;
+    border: 2px solid #829276;
+    border-radius: 5px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+.time-box strong {
+    display: block;
+    font-size: 35px;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* =========================
+   PAGE 4: REASONS
+========================= */
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.reason {
+    background: #f7e6e8;
+    border: 2px solid #d9aab4;
+    border-radius: 8px;
+    padding: 15px 10px;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.reason:hover {
+    transform: scale(1.03);
+}
+
+.reason.revealed {
+    background: var(--pink);
+}
+
+/* =========================
+   PAGE 5: QUIZ
+========================= */
+
+.question {
+    background: #f6e8e7;
+    border: 2px solid #d9b1ad;
+    padding: 17px;
+    margin: 18px 0;
+    border-radius: 8px;
+}
+
+.quiz-result {
+    min-height: 25px;
+    font-weight: bold;
+    color: var(--brown);
+    font-size: 19px;
+}
+
+.quiz-option {
+    min-width: 145px;
+}
+
+/* Secret Easter egg */
+
+.easter-egg {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed #c5aa9c;
+}
+
+.secret-icon {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    font-size: 19px;
+    opacity: .55;
+    padding: 5px;
+}
+
+.secret-icon:hover {
+    opacity: 1;
+    background: transparent;
+    transform: rotate(-10deg) scale(1.2);
+}
+
+#secretFile {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #dce3c7;
+    color: var(--screen-dark);
+    border: 5px double #72836a;
+    text-align: center;
+    animation: fadeIn .6s ease;
+}
+
+.secret-title {
+    font-family: 'VT323', monospace;
+    font-size: 29px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   PAGE 6: LETTER
+========================= */
+
+.letter {
+    line-height: 2;
+    font-size: 16px;
+    padding: 10px 5px;
+}
+
+.age {
+    display: inline-block;
+    background: var(--pink);
+    border: 4px double var(--pink-dark);
+    padding: 8px 32px;
+    border-radius: 12px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 70px;
+    margin: 10px;
+    box-shadow: 5px 5px 0 #d9a9b5;
+}
+
+#finalReveal {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #f5dce2;
+    border: 3px dashed var(--pink-dark);
+    animation: fadeIn 1s ease;
+}
+
+.final-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 10;
+    color: #d89dab;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 500px) {
+
+    .computer {
+        padding: 12px;
+        border-radius: 25px;
+    }
+
+    .screen {
+        padding: 20px 12px;
+        border-width: 8px;
+        min-height: 350px;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px 14px;
+    }
+
+    .time-box {
+        min-width: 65px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =================================
+     PAGE 1: COMPUTER STARTUP
+================================= -->
+
+<section class="page active" id="page1">
+
+<div class="computer">
+
+    <div class="monitor-top">
+        ♡ PRANAV COMPUTER SYSTEM ♡
+    </div>
+
+    <div class="screen">
+
+        <div class="screen-content">
+
+            <div class="screen-text">
+
+                <p>BIOS VERSION 2.023</p>
+                <p>INITIALISING BIRTHDAY.exe...</p>
+                <p>LOADING USER PROFILE...</p>
+
+                <hr>
+
+                <h1>HELLO, CHEEKY AUNTY.</h1>
+
+                <p>USER DETECTED: CUTU CHIC</p>
+
+                <p>STATUS: GETTING OLDER...</p>
+
+                <p>AGE UPDATE: PENDING</p>
+
+                <br>
+
+                <h2>COUNTDOWN TO YOUR DAY</h2>
+
+                <div class="countdown">
+
+                    <div class="time-box">
+                        <strong id="days">00</strong>
+                        DAYS
+                    </div>
+
+                    <div class="time-box">
+                        <strong id="hours">00</strong>
+                        HRS
+                    </div>
+
+                    <div class="time-box">
+                        <strong id="minutes">00</strong>
+                        MIN
+                    </div>
+
+                    <div class="time-box">
+                        <strong id="seconds">00</strong>
+                        SEC
+                    </div>
+
+                </div>
+
+                <p>AWAITING BIRTHDAY<span class="cursor">_</span></p>
+
+                <button class="primary" id="openButton" disabled onclick="nextPage(2)">
+                    OPEN FILE →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="monitor-bottom">
+
+        <div class="brand">RETROTECH 2003</div>
+
+        <div style="display:flex;align-items:center;gap:12px;">
+            <div class="monitor-light"></div>
+            <div class="monitor-button"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     PAGE 2: BIRTHDAY
+================================= -->
+
+<section class="page" id="page2">
+
+<div class="card">
+
+    <div class="card-header">
+        FILE 001 — BIRTHDAY SURPRISE
+    </div>
+
+    <h1>HAPPY BIRTHDAY CUTU CHIC!</h1>
+
+    <h2>MWAHHHH 💋</h2>
+
+    <p>
+        Your special day has officially arrived.
+    </p>
+
+    <p>
+        Ready for the rest of your surprise?
+    </p>
+
+    <button class="primary" onclick="nextPage(3)">
+        NEXT FILE →
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     PAGE 3: FIRST DATE
+================================= -->
+
+<section class="page" id="page3">
+
+<div class="card">
+
+    <div class="card-header">
+        FILE 002 — MEMORY FOUND
+    </div>
+
+    <h1>OUR FIRST DATE</h1>
+
+    <img
+        src="images/firstdate.jpg"
+        class="photo"
+        alt="Our first date"
+    >
+
+    <p>
+        A memory worth keeping forever.
+    </p>
+
+    <button class="primary" onclick="nextPage(4)">
+        NEXT FILE →
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     PAGE 4: 16 REASONS
+================================= -->
+
+<section class="page" id="page4">
+
+<div class="card">
+
+    <div class="card-header">
+        FILE 003 — CLASSIFIED INFORMATION
+    </div>
+
+    <h1>16 LITTLE REASONS</h1>
+
+    <p>Click each box to reveal a reason.</p>
+
+    <div class="reasons" id="reasons"></div>
+
+    <button class="primary" onclick="nextPage(5)">
+        NEXT FILE →
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     PAGE 5: THE US QUIZ
+================================= -->
+
+<section class="page" id="page5">
+
+<div class="card">
+
+    <div class="card-header">
+        FILE 004 — KNOWLEDGE TEST
+    </div>
+
+    <h1>THE OFFICIAL US QUIZ</h1>
+
+    <p>Let's see how well you know us.</p>
+
+    <div id="quiz"></div>
+
+
+    <!-- HIDDEN ABHISHEK EASTER EGG -->
+
+    <div class="easter-egg">
+
+        <p class="small">
+            SOMEWHERE ON THIS COMPUTER...
+        </p>
+
+        <button
+            class="secret-icon"
+            onclick="unlockEasterEgg()"
+            title="Secret file"
+        >
+            🏏
+        </button>
+
+        <div id="secretFile">
+
+            <div class="secret-title">
+                CLASSIFIED FILE UNLOCKED
+            </div>
+
+            <hr>
+
+            <h2>ABHISHEK SHARMA</h2>
+
+            <p>
+                ABHISHEK SHARMA SENDS HIS LOVE
+                FROM PRANAV'S BASEMENT.
+            </p>
+
+            <hr>
+
+            <h2>IS ABHISHEK SHARMA GAY?</h2>
+
+            <button onclick="abhishekAnswer()">YES</button>
+
+            <button onclick="abhishekAnswer()">YESYES</button>
+
+            <button onclick="abhishekAnswer()">YESYESYES</button>
+
+            <p id="abhishekResult" class="quiz-result"></p>
+
+        </div>
+
+    </div>
+
+
+    <button class="primary" onclick="nextPage(6)">
+        FINAL FILE →
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     PAGE 6: BIRTHDAY LETTER
+================================= -->
+
+<section class="page" id="page6">
+
+<div class="card">
+
+    <div class="card-header">
+        FINAL FILE — TO MY CUTU CHIC
+    </div>
+
+    <h1>
+        HAPPPPPPPYYYYY
+        BIRTHDAYYYYY
+    </h1>
+
+    <h2>CUTU CHIC</h2>
+
+    <h2>I LOVE YOU AUNTY.</h2>
+
+
+    <!-- KISSING PHOTO -->
+
+    <img
+        src="images/kiss.jpg"
+        class="photo"
+        alt="Our kissing picture"
+    >
+
+
+    <div class="letter">
+
+        <p>
+            Happy birthday you cutie chic,
+            I lovey you so much.
+        </p>
+
+        <p>
+            I remember calling you last year
+            to wish you on your birthday after
+            the kissy day hehe.
+        </p>
+
+        <p>
+            You're cute but now an aunty.
+        </p>
+
+        <div class="age">23</div>
+
+        <p>
+            You're 23 and I'm 21 till like
+            30th of Nov hahah.
+        </p>
+
+        <p>
+            Jokes aside, I lovey you so much
+            and I'm grateful for everything.
+        </p>
+
+        <p>
+            Abhishek Sharma also says happy birthday
+            (I have him locked up in my basement).
+        </p>
+
+        <h2>I LOVE U DUBAI GOTI.</h2>
+
+    </div>
+
+
+    <hr>
+
+    <h2>ONE LAST KISSY? 💋</h2>
+
+    <button class="primary" onclick="showFinal()">
+        YES PLEASE
+    </button>
+
+
+    <div id="finalReveal">
+
+        <div class="final-text">
+            MWAHHHHHH!!
+        </div>
+
+        <h2>HAPPY BIRTHDAY CUTU CHIC!!</h2>
+
+        <p>UNLIMITED KISSIES FOR YOU.</p>
+
+        <h2>LOVE YOUUU.</h2>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* =================================
+   BIRTHDAY LOCK + PAGE NAVIGATION
+================================= */
+
+// 16 November 2026, 00:00 Irish time
+const birthday = new Date("2026-11-16T00:00:00+00:00").getTime();
+
+let unlocked = false;
+
+function checkBirthdayLock() {
+
+    unlocked = Date.now() >= birthday;
+
+    const button = document.getElementById('openButton');
+
+    button.disabled = !unlocked;
+
+    if (!unlocked) {
+
+        button.textContent = "SYSTEM LOCKED 🔒";
+
+        // Keep all other pages inaccessible
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+
+        document.getElementById('page1').classList.add('active');
+
+    } else {
+
+        button.textContent = "OPEN FILE →";
+
+    }
+
+}
+
+
+function nextPage(number) {
+
+    if (!unlocked) {
+        checkBirthdayLock();
+        return;
+    }
+
+    if (number < 1 || number > 6) return;
+
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page' + number)
+        .classList.add('active');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+}
+
+
+/* =================================
+   COUNTDOWN TO 16 NOVEMBER
+================================= */
+
+function updateCountdown() {
+
+    let difference = birthday - Date.now();
+
+    if (difference < 0) difference = 0;
+
+    document.getElementById('days').textContent =
+        Math.floor(difference / 86400000);
+
+    document.getElementById('hours').textContent =
+        Math.floor((difference / 3600000) % 24);
+
+    document.getElementById('minutes').textContent =
+        Math.floor((difference / 60000) % 60);
+
+    document.getElementById('seconds').textContent =
+        Math.floor((difference / 1000) % 60);
+
+    checkBirthdayLock();
+
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+function createHeart() {
+
+    const heart = document.createElement('div');
+
+    heart.className = 'heart';
+
+    heart.textContent = ['♡', '♥', '💕'][Math.floor(Math.random() * 3)];
+
+    heart.style.left = Math.random() * 100 + 'vw';
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + 'px';
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+
+}
+
+setInterval(createHeart, 800);
+
+
+/* =================================
+   16 REASONS
+================================= */
+
+const reasons = [
+
+    "I love how you get annoyed at literally every small thing. 😂",
+
+    "I love those weird noises you randomly make.",
+
+    "I love the way you smile. It's my favourite thing.",
+
+    "I love your goofy drunk version. BWAHAHA.",
+
+    "I love how you show affection by getting gussa.",
+
+    "I love how you can be cute and irritating at the exact same time.",
+
+    "I love your little expressions.",
+
+    "I love how you make ordinary moments special.",
+
+    "I love your silly side.",
+
+    "I love how you make me laugh without even trying, cause u stupid.",
+
+    "I love how dramatic you can be.",
+
+    "I love your hugs and kissies.",
+
+    "I love the little things you do without realising.",
+
+    "I love how comfortable I can be around you.",
+
+    "I love that I get to call you mine.",
+
+    "I love you simply because you're YOU."
+
+];
+
+const reasonsContainer =
+    document.getElementById('reasons');
+
+reasons.forEach((reason, index) => {
+
+    const box = document.createElement('div');
+
+    box.className = 'reason';
+
+    box.textContent = `${index + 1}. TAP TO REVEAL ♡`;
+
+    box.onclick = function() {
+
+        if (!box.classList.contains('revealed')) {
+
+            box.classList.add('revealed');
+
+            box.textContent = reason;
+
+        }
+
+    };
+
+    reasonsContainer.appendChild(box);
+
+});
+
+
+/* =================================
+   QUIZ WITH RIGHT AND WRONG ANSWERS
+================================= */
+
+/*
+Correct answers:
+1. Annoying = Cheeky
+2. Dramatic = Cheeky
+3. Fell first = DA GOAT PRANAV
+4. Better kissies = BOTH
+5. Bigger aunty = Cheeky
+*/
+
+const questions = [
+
+    {
+        question: "Who is more annoying?",
+        correct: "cheeky"
+    },
+
+    {
+        question: "Who is more dramatic?",
+        correct: "cheeky"
+    },
+
+    {
+        question: "Who fell first?",
+        correct: "pranav"
+    },
+
+    {
+        question: "Who gives better kissies?",
+        correct: "both"
+    },
+
+    {
+        question: "Who is the bigger aunty?",
+        correct: "cheeky"
+    }
+
+];
+
+const quizContainer =
+    document.getElementById('quiz');
+
+questions.forEach((item, index) => {
+
+    const div = document.createElement('div');
+
+    div.className = 'question';
+
+    div.innerHTML = `
+
+        <h3>${index + 1}. ${item.question}</h3>
+
+        <button
+            class="quiz-option"
+            onclick="checkAnswer(this, ${index}, 'cheeky')"
+        >
+            Cheeky
+        </button>
+
+        <button
+            class="quiz-option"
+            onclick="checkAnswer(this, ${index}, 'pranav')"
+        >
+            DA GOAT PRANAV 🐐
+        </button>
+
+        <p class="quiz-result"></p>
+
+    `;
+
+    quizContainer.appendChild(div);
+
+});
+
+
+function checkAnswer(button, questionIndex, selected) {
+
+    const question = questions[questionIndex];
+
+    const result =
+        button.parentElement.querySelector('.quiz-result');
+
+    let correct = false;
+
+    if (question.correct === 'both') {
+
+        correct = true;
+
+    } else if (question.correct === selected) {
+
+        correct = true;
+
+    }
+
+    if (correct) {
+
+        result.textContent = 'YA';
+
+        const buttons =
+            button.parentElement.querySelectorAll('button');
+
+        buttons.forEach(b => {
+            b.disabled = true;
+            b.style.opacity = '.6';
+        });
+
+        button.style.background = '#cbd5b6';
+
+    } else {
+
+        result.textContent = 'NAH, TRY AGAIN.';
+
+    }
+
+}
+
+
+/* =================================
+   HIDDEN ABHISHEK EASTER EGG
+================================= */
+
+function unlockEasterEgg() {
+
+    const secret =
+        document.getElementById('secretFile');
+
+    secret.style.display = 'block';
+
+    secret.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+
+}
+
+
+/* All three Abhishek answers are accepted */
+
+function abhishekAnswer() {
+
+    document.getElementById('abhishekResult')
+        .textContent = 'YA';
+
+}
+
+
+/* =================================
+   FINAL KISSY
+================================= */
+
+function showFinal() {
+
+    const reveal =
+        document.getElementById('finalReveal');
+
+    reveal.style.display = 'block';
+
+    reveal.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+
+}
+
+</script>
+
+</body>
+</html>
